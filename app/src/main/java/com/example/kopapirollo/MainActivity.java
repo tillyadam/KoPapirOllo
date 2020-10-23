@@ -51,51 +51,7 @@ public class MainActivity extends AppCompatActivity {
                     emberPont += 1;
                 }
 
-                switch (nyertes) {
-                    case 'g':
-                        toast = Toast.makeText(getApplicationContext(), "A gép nyert", Toast.LENGTH_SHORT);
-                        toast.show();
-                        break;
-                    case 'e':
-                        toast = Toast.makeText(getApplicationContext(), "Az ember nyert", Toast.LENGTH_SHORT);
-                        toast.show();
-                        break;
-                    case 'd':
-                        toast = Toast.makeText(getApplicationContext(), "Döntetlen", Toast.LENGTH_SHORT);
-                        toast.show();
-                        dontetlenekSzama.setText("Döntetlenek száma: " + dontetlenPont);
-                        break;
-                    default:
-                        break;
-                }
-
-                switch (gepPont) {
-                    case 1:
-                        emberElet3.setImageResource(R.drawable.heart1);
-                        break;
-                    case 2:
-                        emberElet2.setImageResource(R.drawable.heart1);
-                        break;
-                    case 3:
-                        emberElet1.setImageResource(R.drawable.heart1);
-                        break;
-                    default:
-                        break;
-                }
-
-                switch (emberPont) {
-                    case 1:
-                        gepElet3.setImageResource(R.drawable.heart1);
-                        break;
-                    case 2:
-                        gepElet2.setImageResource(R.drawable.heart1);
-                        break;
-                    case 3:
-                        gepElet1.setImageResource(R.drawable.heart1);
-                        break;
-                    default:
-                        break;
-                }
+                eredmeny();
 
                 alertMessage();
             }
@@ -122,51 +78,7 @@ public class MainActivity extends AppCompatActivity {
                     gepPont += 1;
                 }
 
-                switch (nyertes) {
-                    case 'g':
-                        toast = Toast.makeText(getApplicationContext(), "A gép nyert", Toast.LENGTH_SHORT);
-                        toast.show();
-                        break;
-                    case 'e':
-                        toast = Toast.makeText(getApplicationContext(), "Az ember nyert", Toast.LENGTH_SHORT);
-                        toast.show();
-                        break;
-                    case 'd':
-                        toast = Toast.makeText(getApplicationContext(), "Döntetlen", Toast.LENGTH_SHORT);
-                        toast.show();
-                        dontetlenekSzama.setText("Döntetlenek száma: " + dontetlenPont);
-                        break;
-                    default:
-                        break;
-                }
-
-                switch (gepPont) {
-                    case 1:
-                        emberElet3.setImageResource(R.drawable.heart1);
-                        break;
-                    case 2:
-                        emberElet2.setImageResource(R.drawable.heart1);
-                        break;
-                    case 3:
-                        emberElet1.setImageResource(R.drawable.heart1);
-                        break;
-                    default:
-                        break;
-                }
-
-                switch (emberPont) {
-                    case 1:
-                        gepElet3.setImageResource(R.drawable.heart1);
-                        break;
-                    case 2:
-                        gepElet2.setImageResource(R.drawable.heart1);
-                        break;
-                    case 3:
-                        gepElet1.setImageResource(R.drawable.heart1);
-                        break;
-                    default:
-                        break;
-                }
+                eredmeny();
 
                 alertMessage();
             }
@@ -193,51 +105,7 @@ public class MainActivity extends AppCompatActivity {
                     dontetlenPont += 1;
                 }
 
-                switch (nyertes) {
-                    case 'g':
-                        toast = Toast.makeText(getApplicationContext(), "A gép nyert", Toast.LENGTH_SHORT);
-                        toast.show();
-                        break;
-                    case 'e':
-                        toast = Toast.makeText(getApplicationContext(), "Az ember nyert", Toast.LENGTH_SHORT);
-                        toast.show();
-                        break;
-                    case 'd':
-                        toast = Toast.makeText(getApplicationContext(), "Döntetlen", Toast.LENGTH_SHORT);
-                        toast.show();
-                        dontetlenekSzama.setText("Döntetlenek száma: " + dontetlenPont);
-                        break;
-                    default:
-                        break;
-                }
-
-                switch (gepPont) {
-                    case 1:
-                        emberElet3.setImageResource(R.drawable.heart1);
-                        break;
-                    case 2:
-                        emberElet2.setImageResource(R.drawable.heart1);
-                        break;
-                    case 3:
-                        emberElet1.setImageResource(R.drawable.heart1);
-                        break;
-                    default:
-                        break;
-                }
-
-                switch (emberPont) {
-                    case 1:
-                        gepElet3.setImageResource(R.drawable.heart1);
-                        break;
-                    case 2:
-                        gepElet2.setImageResource(R.drawable.heart1);
-                        break;
-                    case 3:
-                        gepElet1.setImageResource(R.drawable.heart1);
-                        break;
-                    default:
-                        break;
-                }
+                eredmeny();
 
                 alertMessage();
             }
@@ -261,6 +129,54 @@ public class MainActivity extends AppCompatActivity {
         emberElet1 = findViewById(R.id.emberElet1);
         emberElet2 = findViewById(R.id.emberElet2);
         emberElet3 = findViewById(R.id.emberElet3);
+    }
+
+    private void eredmeny(){
+        switch (nyertes) {
+            case 'g':
+                toast = Toast.makeText(getApplicationContext(), "A gép nyert", Toast.LENGTH_SHORT);
+                toast.show();
+                break;
+            case 'e':
+                toast = Toast.makeText(getApplicationContext(), "Az ember nyert", Toast.LENGTH_SHORT);
+                toast.show();
+                break;
+            case 'd':
+                toast = Toast.makeText(getApplicationContext(), "Döntetlen", Toast.LENGTH_SHORT);
+                toast.show();
+                dontetlenekSzama.setText("Döntetlenek száma: " + dontetlenPont);
+                break;
+            default:
+                break;
+        }
+
+        switch (gepPont) {
+            case 1:
+                emberElet3.setImageResource(R.drawable.heart1);
+                break;
+            case 2:
+                emberElet2.setImageResource(R.drawable.heart1);
+                break;
+            case 3:
+                emberElet1.setImageResource(R.drawable.heart1);
+                break;
+            default:
+                break;
+        }
+
+        switch (emberPont) {
+            case 1:
+                gepElet3.setImageResource(R.drawable.heart1);
+                break;
+            case 2:
+                gepElet2.setImageResource(R.drawable.heart1);
+                break;
+            case 3:
+                gepElet1.setImageResource(R.drawable.heart1);
+                break;
+            default:
+                break;
+        }
     }
 
     private void alertMessage() {
@@ -302,43 +218,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /*
-    private void gepValaszt() {
-        if (rnd == 1) {
-            gepvalasztasaImg.setImageResource(R.drawable.rock);
-            nyertes = 'g';
-            gepPont += 1;
-        } else if (rnd == 2) {
-            gepvalasztasaImg.setImageResource(R.drawable.paper);
-            nyertes = 'e';
-            emberPont += 1;
-        } else {
-            gepvalasztasaImg.setImageResource(R.drawable.scissors);
-            nyertes = 'd';
-        }
-    }
-    private void nyertes(){
 
-        switch (nyertes) {
-            case 'g':
-                toast = Toast.makeText(getApplicationContext(), "A gép nyert", Toast.LENGTH_SHORT);
-                toast.show();
-                eredmenyTxt.setText("Eredmény: Ember: " + emberPont + " - Gép: " + gepPont);
-                break;
-            case 'e':
-                toast = Toast.makeText(getApplicationContext(), "Az ember nyert", Toast.LENGTH_SHORT);
-                toast.show();
-                eredmenyTxt.setText("Eredmény: Ember: " + emberPont + " - Gép: " + gepPont);
-                break;
-            case 'd':
-                toast = Toast.makeText(getApplicationContext(), "Döntetlen", Toast.LENGTH_SHORT);
-                toast.show();
-                eredmenyTxt.setText("Eredmény: Ember: " + emberPont + " - Gép: " + gepPont);
-                break;
-            default:
-                break;
-        }
-    }*/
 
 
 }
