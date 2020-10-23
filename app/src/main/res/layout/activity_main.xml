@@ -1,18 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:screenOrientation="portrait"
     tools:context=".MainActivity">
 
-    <TextView
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="horizontal">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/gepElet1"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:src="@drawable/heart2" />
+
+        <ImageView
+            android:id="@+id/gepElet2"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:src="@drawable/heart2" />
+
+        <ImageView
+            android:id="@+id/gepElet3"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:src="@drawable/heart2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20sp"
+            android:text="Gép"
+            android:textSize="30sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Játékos"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:id="@+id/emberElet3"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:src="@drawable/heart2" />
+
+        <ImageView
+            android:id="@+id/emberElet2"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:src="@drawable/heart2" />
+
+        <ImageView
+            android:id="@+id/emberElet1"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:src="@drawable/heart2" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/dontetlenekSzamaTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center_horizontal"
+        android:text="Döntetlenek száma: 0"
+        android:textSize="40sp" />
+
+    <ImageView
+        android:id="@+id/teValasztasodImg"
+        android:layout_width="match_parent"
+        android:layout_height="160sp"
+        android:src="@drawable/rock" />
+
+    <TextView
+        android:id="@+id/teValasztasodTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center_horizontal"
+        android:text="A te választásod"
+        android:textSize="40sp" />
+
+    <ImageView
+        android:id="@+id/gepvalasztasaImg"
+        android:layout_width="match_parent"
+        android:layout_height="160sp"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="5sp"
+        android:src="@drawable/scissors" />
+
+    <TextView
+        android:id="@+id/gepvalasztasaTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:text="A gép választása"
+        android:textSize="40sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="122sp"
+        android:layout_marginTop="20sp"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <!--        <Button-->
+        <!--            android:id="@+id/koBtn"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="Kő"-->
+        <!--            android:textSize="30sp"-->
+        <!--            android:layout_alignParentBottom="true"/>-->
+
+        <!--        <Button-->
+        <!--            android:id="@+id/papirBtn"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_alignParentBottom="true"-->
+        <!--            android:layout_centerInParent="true"-->
+        <!--            android:layout_marginLeft="30sp"-->
+        <!--            android:layout_marginRight="30sp"-->
+        <!--            android:text="Papír"-->
+        <!--            android:textSize="30sp" />-->
+
+        <!--        <Button-->
+        <!--            android:id="@+id/olloBtn"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_alignParentRight="true"-->
+        <!--            android:layout_alignParentBottom="true"-->
+        <!--            android:text="Olló"-->
+        <!--            android:textSize="30sp" />-->
+
+        <ImageButton
+            android:id="@+id/koBtn"
+            android:layout_width="100sp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/rock" />
+
+        <ImageButton
+            android:id="@+id/papirBtn"
+            android:layout_width="100sp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="30sp"
+            android:layout_marginRight="30sp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/paper" />
+
+        <ImageButton
+            android:id="@+id/olloBtn"
+            android:layout_width="100sp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/scissors" />
+    </LinearLayout>
+
+</LinearLayout>
